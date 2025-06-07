@@ -1,28 +1,27 @@
 package com.gopali.bookingsystem.service;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gopali.bookingsystem.model.Booking;
+import com.gopali.bookingsystem.repository.BookingRepo;
 
 @Service
 public class BookingService {
 
-    private ArrayList<Cust> custs;
+    @Autowired
+    BookingRepo bookingRepo;
 
-    BookingService() {
-        custs = new ArrayList<>(Array.asList(
-                new Cust("gg"),
-                new Cust("gg1"),
-                new Cust("gg2")));
-    }
-
-    public boolean addCust(String cust){
-        cust=new cust("custName");
-        if(cust==null)
+    public boolean addBooking(Booking booking){
+        if(booking==null)
         return false;
-        else
-        {
-            custs=addCust(cust);
-            return true;
-        }
+        else{
+bookingRepo.save(booking);
+return true;
+        } 
     }
 
     

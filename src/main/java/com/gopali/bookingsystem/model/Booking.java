@@ -1,5 +1,15 @@
 package com.gopali.bookingsystem.model;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 import javax.annotation.processing.Generated;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 
 /**
@@ -10,7 +20,7 @@ import javax.annotation.processing.Generated;
  */
 
 @Entity
-@Table(Name="booking")
+@Table(name="booking")
 public class Booking{
 
     @Id
@@ -29,7 +39,7 @@ public class Booking{
     @Column
     private LocalTime endTime;
     
-    @Column(required=null)
+    @Column(nullable = false)
     private Long coworkerId; // null in step 1, used from step 3
 
     Booking(){
