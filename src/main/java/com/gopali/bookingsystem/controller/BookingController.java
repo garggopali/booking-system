@@ -1,4 +1,4 @@
-package com.example.bookingsystem.controller;
+package com.gopali.bookingsystem.controller;
 
 import org.springframework.http.ResponseEntity;
 
@@ -13,8 +13,9 @@ public class BookingController{
     }
 
     @PostMapping("/")
-    private  saveBooking(@RequestBody Booking booking){
-        Customer cust=new Customer("GG");
-        return bookingService.addCust(cust);
+    private ResponseEntity saveBooking(@RequestBody Booking booking){
+        return null;
     }
+
+
 }

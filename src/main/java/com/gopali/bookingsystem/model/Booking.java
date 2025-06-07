@@ -1,3 +1,4 @@
+package com.gopali.bookingsystem.model;
 import javax.annotation.processing.Generated;
 
 

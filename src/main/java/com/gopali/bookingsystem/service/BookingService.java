@@ -1,3 +1,5 @@
+package com.gopali.bookingsystem.service;
+
 import java.lang.reflect.Array;
 
 @Service
